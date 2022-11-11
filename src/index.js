@@ -43,7 +43,7 @@ function getCountry(evt) {
                 markup =+ 
                 `<div class=blok>
                 <div class=country-info>
-                    <img src=${flags.svg} alt=${json.name.official} width=40px/>
+                    <img src=${json.flags.svg} alt=${json.name.official} width=40px/>
                     <p class=country-name> ${json.name.official}</p>
                 </div>
                 <ul>
