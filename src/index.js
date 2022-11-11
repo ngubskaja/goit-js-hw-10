@@ -5,7 +5,7 @@ import debounce from 'lodash.debounce';
 
 
 
-// fetchCountries('ukraine');
+// fetchCountries('');
 const searchBox = document.getElementById('search-box');
 const countryInfo = document.querySelector('.country-info');
 const countryList = document.querySelector('.country-list');
@@ -31,8 +31,8 @@ function getCountry(evt) {
                 markup =+ 
                 `
               <li class=country-item>
-                <img src=${json.flags.svg} alt=${json.name.official} width=40px/>
-                <p>${json.name.official}</p>
+                <img src=${element.flags.svg} alt=${element.name.official} width=40px/>
+                <p>${element.name.official}</p>
               </li>
                 `
                 
@@ -43,16 +43,16 @@ function getCountry(evt) {
                 markup =+ 
                 `<div class=blok>
                 <div class=country-info>
-                    <img src=${json.flags.svg} alt=${json.name.official} width=40px/>
-                    <p class=country-name> ${json.name.official}</p>
+                    <img src=${element.flags.svg} alt=${element.name.official} width=40px/>
+                    <p class=country-name> ${element.name.official}</p>
                 </div>
                 <ul>
                     <li class=country-item>
-                        <p><b>Capital:</b></p> ${capital}</li>
+                        <p><b>Capital:</b></p> ${element.capital}</li>
                     <li class=country-item>
-                        <p><b>Population:</b></p> ${population}</li>
+                        <p><b>Population:</b></p> ${element.population}</li>
                     <li class=country-item>
-                        <p><b>Languages:</b></p> ${Object.values(languages)}</li>
+                        <p><b>Languages:</b></p> ${Object.values(element.languages)}</li>
                 </ul>
                 </div>
                 `
