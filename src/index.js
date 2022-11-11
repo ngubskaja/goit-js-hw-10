@@ -39,7 +39,7 @@ function getCountry(evt) {
             }).join('')
             countryList.insertAdjacentHTML('beforeend', markup)
           } 
-          if (json.length >= 2 && json.length <= 10){
+          if (json.length === 1){
             const markup = json.map(element => {
              return `
              <div class=blok>
@@ -58,7 +58,7 @@ function getCountry(evt) {
              </div>
              `
             }).join('')
-            countryList.insertAdjacentHTML('beforeend', markup)
+            countryInfo.insertAdjacentHTML('beforeend', markup)
          
           };
             
